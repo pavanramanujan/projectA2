@@ -1,0 +1,28 @@
+#title{
+    font-family: "Dialog";
+    font-style: normal;
+    font-size: 50px;
+    text-align: center;
+    padding: 10px;
+    background-color: wheat;
+    color: #59121c;
+}
+#copyrights{
+    font-family: Dialog;
+    font-style: italic;
+    font-size: 15px;
+    text-align: center;
+    padding: 10px;
+    background-color: wheat;
+    color: #8b2820;
+}
+
+.T{
+    font-family: Dialog;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    background-color: wheat;
+    color: #320a10;
+}

@@ -1,0 +1,29 @@
+{% load static %}
+<html>
+    <head>
+        <title>
+            Student course schedule
+        </title>
+        <link rel="stylesheet" href="{% static 'css/common.css' %}">
+    </head>
+    <body bgcolor="#f5deb3">
+        <table border="2" align="center" width="1000">
+            <tr>
+                <th colspan="2" id="title">EASY TECHNOLOGIES </th>
+            </tr>
+
+            <tr>
+                <th colspan="2">
+                    {% block rlm %}
+
+                    {% endblock %}
+                </th>
+            </tr>
+            <tr>
+                <th colspan="2" id="copyrights">
+                    copyrights @ easytechnilogies.in
+                </th>
+            </tr>
+        </table>
+    </body>
+</html>
