@@ -5,7 +5,7 @@
     text-align: center;
     padding: 10px;
     background-color: wheat;
-    color: #59121c;
+    color: #387ea0;
 }
 #copyrights{
     font-family: Dialog;
@@ -25,4 +25,33 @@
     padding: 10px;
     background-color: wheat;
     color: #320a10;
+}
+
+#wel{
+    font-family: "Dialog";
+    font-style: italic;
+    font-size: 30px;
+
+    padding: 10px;
+    background-color: wheat;
+    color: #59121c;
+}
+#ta{
+    font-family: Dialog;
+    font-style: italic;
+    font-size: 15px;
+    padding-bottom: 25px;
+
+    background-color: wheat;
+    color: #8b2820;
+}
+
+.det{
+    font-family: Dialog;
+    font-style: normal;
+    font-size: 15px;
+    text-align: center;
+    padding: 10px;
+    background-color: #f5f5cc;
+    color: #58105d;
 }

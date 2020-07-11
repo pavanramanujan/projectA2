@@ -23,7 +23,11 @@ urlpatterns = [
     path('index/', views.index , name='index'),
     path('admin1/', views.admin1, name='admin1'),
     path('admin_login/',views.admin_login,name='admin_login'),
+    path('admin_home/',views.admin_home,name='admin_home'),
     path('schedule_class/', views.schedule_class, name='schedule_class'),
     path('schedule_class_reg/', views.schedule_class_reg, name='schedule_class_reg'),
-    path('all_schedule/', views.all_schedule, name='all_schedule')
+    path('all_schedule/', views.all_schedule, name='all_schedule'),
+    path('update_course/',views.update_course, name='update_course'),
+    path('update_course_conf/',views.update_course_conf,name='update_course_conf'),
+    path('delete/', views.delete, name='delete'),
 ]

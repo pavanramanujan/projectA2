@@ -3,15 +3,34 @@
     {% include 'main_menu.html' %}
     <form action="{% url 'admin_login' %}" method="post">
     {% csrf_token %}
-        <table align="center" border="2">
-            <tr>
-                <th><input type="text" placeholder="Username" name="a1" required></th>
+
+        <table align="center" border="0">
+
             </tr>
             <tr>
-                <th><input type="password" placeholder="Password" name="a2" required></th>
+                <th >
+                <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Username</span>
+                </div>
+                 <input type="text" class="form-control" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default"  name="a1" required>
+                </div>
+                </th>
             </tr>
-            <tr>
-                <th><button type="submit">Submit</button></th>
+            <tr><th>
+                <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Password</span>
+                </div>
+                 <input type="password" class="form-control" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default"  name="a2" required>
+                </div>
+                </th>
+            </tr>
+                <th style="text-align: center">
+                    <button type="submit" class="btn btn-secondary">Submit</button>
+                </th>
             </tr>
         </table>
     </form>

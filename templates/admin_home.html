@@ -1,0 +1,19 @@
+{% extends 'common.html' %}
+{% block rlm %}
+    {% load static %}
+    {% include 'admin_menu.html' %}
+    <link rel="stylesheet" href="{% static 'css/common.css' %}">
+    <table align="center" border="0">
+        <tr>
+           <th id="wel">WELCOME ADMINISTRATOR</th>
+        </tr>
+        <tr>
+            <th id="ta">What Would You Like To Do Today?</th>
+        </tr>
+        <tr>
+            <th bgcolor="#f5deb3"><img src="{% static 'images/ligin.png' %}" width="500"></th>
+        </tr>
+
+
+    </table>
+{% endblock %}

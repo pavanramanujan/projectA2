@@ -3,7 +3,7 @@
 {% block rlm %}
     {% include 'admin_menu.html' %}
     <link rel="stylesheet" href="{% static 'css/common.css' %}">
-    <table align="center" border="2">
+    <table align="center" border="2" width="1000">
         <tr>
             <th class="T" width="100">Id</th>
             <th class="T" width="100">Name</th>
@@ -17,17 +17,25 @@
         </tr>
         {% for x in data %}
         <tr>
-            <th>{{ x.id }}</th>
-            <th>{{ x.name }}</th>
-            <th>{{ x.faculty }}</th>
-            <th>{{ x.date }}</th>
-            <th>{{ x.time }}</th>
-            <th>{{ x.fee }}</th>
-            <th>{{ x.duration }}</th>
-            <th>
-                <a href="">Yes</a>
+            <th class="det">{{ x.id }}</th>
+            <th class="det">{{ x.name }}</th>
+            <th class="det">{{ x.faculty }}</th>
+            <th class="det">{{ x.date }}</th>
+            <th class="det">{{ x.time }}</th>
+            <th class="det">{{ x.fee }}</th>
+            <th class="det">{{ x.duration }}</th>
+            <th class="det">
+                <a href="{% url 'update_course' %}?idn={{ x.id }}">Yes</a>
+            </th>
+            <th class="det">
+                <a href="{% url 'delete' %}?idn={{ x.id }}"><img src="{% static 'images/delete .png' %}" width="30" height="30"></a>
             </th>
         </tr>
     {% endfor %}
     </table>
+    {% if messages %}
+        {% for x in messages %}
+            {{ x }}
+        {% endfor %}
+    {% endif %}
 {% endblock %}
