@@ -1,0 +1,18 @@
+{% extends 'common.html' %}
+{% block rlm %}
+    {% load static %}
+    {% include 'student_menu.html' %}
+    <table align="center" border="0">
+        <tr>
+            <th>
+                <img src="{% static 'images/vertcal2.png'%}">
+            </th>
+
+        </tr>
+    </table>
+    {% if messages %}
+        {% for x in messages %}
+            {{ x }}
+        {% endfor %}
+    {% endif %}
+{% endblock %}

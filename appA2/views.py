@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from appA2.models import CourseModel
+from appA2.models import CourseModel,StudentModel
 from django.contrib import messages
 def index(request):
     return render(request,"index.html")
@@ -44,14 +44,37 @@ def update_course_conf(request):
     du = request.POST.get("u7")
     CourseModel.objects.filter(id=no).update(name=na,faculty=fa,date=da,time=ti,fee=fe,duration=du)
     return redirect('all_schedule')
-
-
 def delete(request):
     no = request.GET.get("idn")
     res = CourseModel.objects.get(id=no).delete()
     messages.success(request,"Requested Course Deleted Successfully")
     return redirect('all_schedule')
-
-
 def admin_home(request):
     return render(request,'admin_home.html')
+def student_home(request):
+    return render(request,"student_home.html")
+def student_registration(request):
+    return render(request,"student_registration.html")
+def student_details(request):
+    na = request.POST.get("s1")
+    no = request.POST.get("s2")
+    mid = request.POST.get("s3")
+    pwd = request.POST.get("s4")
+    StudentModel(name=na,cno=no,mail=mid,pas=pwd).save()
+    messages.success(request,"Your Registration Is Successfully Completed")
+    return redirect('student_home')
+
+
+def student_login(request):
+    return render(request,'student_login.html')
+
+
+def stu_log_conf(request):
+    uname = request.POST.get("u1")
+    pa = request.POST.get("p1")
+    try:
+        StudentModel.objects.get(mail=uname,pas=pa)
+        return render(request,"stu_log_conf.html")
+    except StudentModel.DoesNotExist:
+        messages.error(request,"Invalid Credentials")
+        return redirect('student_login')

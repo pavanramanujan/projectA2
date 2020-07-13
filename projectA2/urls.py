@@ -30,4 +30,9 @@ urlpatterns = [
     path('update_course/',views.update_course, name='update_course'),
     path('update_course_conf/',views.update_course_conf,name='update_course_conf'),
     path('delete/', views.delete, name='delete'),
+    path('student_home/',views.student_home,name='student_home'),
+    path('student_registration/',views.student_registration,name='student_registration'),
+    path('student_details/',views.student_details,name='student_details'),
+    path('student_login/',views.student_login,name = 'student_login'),
+    path('stu_log_conf/',views.stu_log_conf,name='stu_log_conf')
 ]

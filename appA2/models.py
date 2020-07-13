@@ -9,4 +9,8 @@ class CourseModel(models.Model):
     fee = models.FloatField()
     duration = models.IntegerField()
 
-
+class StudentModel(models.Model):
+    name = models.CharField(max_length=100)
+    cno = models.IntegerField()
+    mail = models.EmailField()
+    pas = models.CharField(max_length=40)
