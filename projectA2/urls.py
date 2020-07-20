@@ -34,5 +34,9 @@ urlpatterns = [
     path('student_registration/',views.student_registration,name='student_registration'),
     path('student_details/',views.student_details,name='student_details'),
     path('student_login/',views.student_login,name = 'student_login'),
-    path('stu_log_conf/',views.stu_log_conf,name='stu_log_conf')
+    path('stu_log_conf/',views.stu_log_conf,name='stu_log_conf'),
+    path('enrole_page/',views.enrole_page,name='enrole_page'),
+    path('enrole_course/',views.enrole_course,name='enrole_course'),
+    path('view_all_nrol_courses/',views.view_all_nrol_courses,name='view_all_nrol_courses'),
+    path('remove_course/',views.remove_course,name='remove_course')
 ]
